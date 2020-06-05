@@ -1,0 +1,3 @@
+xterm -display $ip:1
+
+Note: calls back on port 6001

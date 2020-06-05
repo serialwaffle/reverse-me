@@ -1,0 +1,1 @@
+Creating a template is simple, just name your template file with the name of the shell and write the command in the file replacing IP port and Shell with thier variables ($ip   $port  $shell)
