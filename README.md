@@ -68,5 +68,7 @@ If you have any feedback, anything that you want to see implemented or running i
 
 
 ## Support
-If you appreciate my work and HackTheBox, feel free to give me some respect: <a href="https://www.hackthebox.eu/profile/5305"><img src="https://www.hackthebox.eu/badge/image/5305" width="150"></a>
+If you appreciate my work and HackTheBox, feel free to give me some respect:
+
+<a href="https://www.hackthebox.eu/profile/5305"><img src="https://www.hackthebox.eu/badge/image/5305" width="150"></a>
 
