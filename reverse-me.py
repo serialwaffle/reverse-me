@@ -32,10 +32,13 @@ def menuip():
     try: 
         cnt = 2 
         for _interface in netifaces.interfaces():
-            _ip = netifaces.ifaddresses(_interface)[netifaces.AF_INET][0]['addr']
-            iface[cnt] = _interface
-            print(("%d. %s %s")%(cnt,_ip,colored(_interface,"green")))
-            cnt +=1
+            try:           
+                _ip = netifaces.ifaddresses(_interface)[netifaces.AF_INET][0]['addr']
+                iface[cnt] = _interface
+                print(("%d. %s %s")%(cnt,_ip,colored(_interface,"green")))
+                cnt +=1
+            except:
+                pass
         selection = input("[*] Select an option from the options above: ")        
         if int(selection) == 1:
             manual = input("[*] Enter IP address: ")
@@ -61,6 +64,7 @@ def menushell(platform):
     cnt = 1
     shelloptions = "./cmds/%s/"%(platform)
     shells = [f for f in os.listdir(shelloptions) if os.path.isfile(os.path.join(shelloptions, f))]
+    shells.sort()
     for s in shells:
        _shell[cnt]=s
        print(("%d. %s")%(cnt,s))
@@ -115,13 +119,16 @@ def build(_platform,_shell,_shelltype,_ip,_port):
     _cmd=_cmd.safe_substitute(ip=_ip, port=_port, shell=_shelltype)
     return _cmd
      
-def printcmd(_cmd):
-    final_cmd = '''
-----------------------------------      
+def printcmd(_cmd,_shell):
+
+    print(colored((("|| %s || ")%(_shell)),"green"))
+    final_cmd = '''      
 %s
-----------------------------------
     '''%(_cmd)
     print(colored(final_cmd,"cyan"))
+    print(colored("---------------------------------------","green"))
+
+    
 
 def verifyIP(_ip):
     try:
@@ -139,26 +146,20 @@ def fast():
     shelltype=cfg.default_shelltype
     for s in shell:
         cmd=build(platform,s,shelltype,ip,port)
-        printcmd(cmd)
+        printcmd(cmd,s)
     exit()
 
 def menu():
     fancybanner()
-    shell="/bin/sh"
+    shell=cfg.default_shelltype
     ip=menuip()
     port=menuport()
     platform=menuplatform()
     shell=menushell(platform)
     shelltype=cfg.default_shelltype
-    
-
-    print(colored(ip + ":"+str(port),"cyan"))
-    print(colored(platform,"cyan"))
-    print(colored(shell,"cyan"))
-
 
     cmd=build(platform,shell,shelltype,ip,port)
-    printcmd(cmd)
+    printcmd(cmd,shell)
     exit()
 
 if __name__ == '__main__':
