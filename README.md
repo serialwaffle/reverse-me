@@ -62,3 +62,11 @@ Note: shell commands are agregated from many different sources.
 - Encoding options
 - Command-line options
 - Integration with SQLMap tamper scripts
+
+## Feedback and issues?
+If you have any feedback, anything that you want to see implemented or running into issues using reverse-me, please feel free to file an issue on https://github.com/serialwaffle/reverse-me/issues
+
+
+## Support
+If you appreciate my work and HackTheBox, feel free to give me some respect: <a href="https://www.hackthebox.eu/profile/5305"><img src="https://www.hackthebox.eu/badge/image/5305" width="150"></a>
+
