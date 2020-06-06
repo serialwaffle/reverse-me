@@ -4,10 +4,14 @@ Reverse-me is a reverse shell generator for use in Capture-The-Flag (CTF) compet
 Reverse-me is fully extensible and customizable.  Users are encouraged to add thier own shell scripts.  This is done by creating a file in the correct platform directory.  
 
 ## Dependencies 
-netifaces
-termcolor
+- [netifaces](https://pypi.org/project/netifaces/)
+- [termcolor](https://pypi.org/project/termcolor/)
+
 
 ## Installation
+```
+git clone https://github.com/serialwaffle/reverse-me.git
+```
 
 ## Usage
 ```
@@ -21,45 +25,40 @@ python3 reverse-me.py --fast
 ## Available Shell Commands
 Note: shell commands are agregated from many different sources.
 ### Nix
-```
-- [1. awk](https://www.nostarch.com/carhacking)
-1. awk
-2. bash_TCP
-3. bash_UDP
-4. c
-5. golang
-6. java
-7. lua
-8. nc
-9. nc_fifo
-10. perl
-11. php
-12. php_exec
-13. php_passthru
-14. php_popen
-15. php_shell_exec
-16. php_system
-17. python_TCP
-18. python_cmd
-19. python_exports
-20. ruby
-21. socat
-22. telnet
-23. template
-24. xterm
-```
+
+- [1. awk](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/awk)
+- [2. bash_TCP](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/bash_TCP)
+- [3. bash_UDP](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/bash_UDP)
+- [4. c](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/c)
+- [5. golang](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/golang)
+- [6. java](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/java)
+- [7. lua](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/lua)
+- [8. nc](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/nc)
+- [9. nc_fifo](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/nc_fifo)
+- [10. perl](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/perl)
+- [11. php](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/php)
+- [12. php_exec](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/php_exec)
+- [13. php_passthru](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/php_passthru)
+- [14. php_popen](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/php_popen)
+- [15. php_shell_exec](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/php_shell_exec)
+- [16. php_system](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/php_system)
+- [17. python_TCP](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/python_TCP)
+- [18. python_cmd](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/python_cmd)
+- [19. python_exports](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/python_exports)
+- [20. ruby](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/ruby)
+- [21. socat](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/socat)
+- [22. telnet](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/telnet)
+- [23. template](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/template)
+- [24. xterm](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/xterm)
+
 ### Windows
-```
-1. lua
-2. powershell
-3. python
-4. ruby
-```
+- [1. lua](https://github.com/serialwaffle/reverse-me/blob/master/cmds/win/lua)
+- [2. powershell](https://github.com/serialwaffle/reverse-me/blob/master/cmds/win/powershell)
+- [3. python](https://github.com/serialwaffle/reverse-me/blob/master/cmds/win/python)
+- [4. ruby](https://github.com/serialwaffle/reverse-me/blob/master/cmds/win/ruby)
+
+
 ## Future Additions
-
-Encoding options
-
-Command-line options
-
-Integration with SQLMap tamper scripts
-
+- Encoding options
+- Command-line options
+- Integration with SQLMap tamper scripts
