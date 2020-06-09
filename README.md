@@ -23,7 +23,7 @@ python3 reverse-me.py --fast
 ```
 
 ## Available Shell Commands
-Note: shell commands are agregated from many different sources.
+Note: shell commands are aggregated from many different sources.
 ### Nix
 
 - [1. awk](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/awk)
