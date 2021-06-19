@@ -1,0 +1,5 @@
+chmod +s /bin/bash
+
+Use:
+/bin/bash -p
+
