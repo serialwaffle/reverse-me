@@ -30,7 +30,7 @@ Note: shell commands are aggregated from many different sources.
 - [2. bash_Local_SUID](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/bash_Local_SUID)
 - [3. bash_TCP](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/bash_TCP)
 - [4. bash_UDP](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/bash_UDP)
-- [5. bash_UDP](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/bash_curl)
+- [5. bash_curl](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/bash_curl)
 - [6. c](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/c)
 - [7. golang](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/golang)
 - [8. java](https://github.com/serialwaffle/reverse-me/blob/master/cmds/nix/java)
