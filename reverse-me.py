@@ -62,7 +62,7 @@ def menuport():
 def menushell(platform):
     _shell = {}
     cnt = 1
-    shelloptions = "./cmds/%s/"%(platform)
+    shelloptions = __file__.rsplit("/",1)[0]+"/cmds/%s/"%(platform)
     shells = [f for f in os.listdir(shelloptions) if os.path.isfile(os.path.join(shelloptions, f))]
     shells.sort()
     for s in shells:
@@ -75,7 +75,8 @@ def menushell(platform):
 def menuplatform():
     _platform = {}
     cnt = 1
-    path = "./cmds/"
+    path = __file__.rsplit("/",1)[0]+"/cmds/"
+    print(path)
     platform= [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
     for p in platform:
         _platform[cnt]=p
@@ -104,7 +105,7 @@ def fastshell():
         exit()
 
 def fastplatform():
-    path = "./cmds/"
+    path = __file__.rsplit("/",1)[0]+"/cmds/"
     platform= [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
     if cfg.target_platform in platform:
         return cfg.target_platform
@@ -113,7 +114,7 @@ def fastplatform():
         exit()   
 
 def build(_platform,_shell,_shelltype,_ip,_port):
-    base_cmd=("cmds/%s/%s"%(_platform,_shell))
+    base_cmd=(__file__.rsplit("/",1)[0]+"/cmds/%s/%s"%(_platform,_shell))
     with open(base_cmd) as c:
         _cmd=Template(c.read())
     _cmd=_cmd.safe_substitute(ip=_ip, port=_port, shell=_shelltype)
@@ -172,7 +173,6 @@ if __name__ == '__main__':
     parser.add_argument("-f","--fast", help="uses values from config settings",action='store_true')
 
     args=parser.parse_args()
-
 
     if args.fast:
         fast()		        
